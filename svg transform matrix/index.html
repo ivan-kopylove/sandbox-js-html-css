@@ -1,0 +1,15 @@
+<script type="text/javascript">
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+	var elem = document.getElementById('myPath');
+    console.log(elem.transform.baseVal.getItem(0).matrix.e);
+	console.log(elem.transform.baseVal.getItem(0).matrix.f);
+	elem.transform.baseVal.getItem(0).matrix.e = 50;
+	elem.transform.baseVal.getItem(0).matrix.f = 50;
+  });
+</script>
+
+<svg>
+	<path transform="translate(10,10)" id="myPath" d="M0 50 L50 50 L50 0 L0 0 Z" fill="red"></path>
+</svg>
