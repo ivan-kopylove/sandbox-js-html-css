@@ -1,0 +1,19 @@
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+</canvas>
+
+
+<head>
+	<script>
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.moveTo(0,0);
+	ctx.lineTo(100,100);
+	ctx.stroke();
+	
+	var canvas = document.getElementById("myCanvas");
+	var img    = canvas.toDataURL("image/png");
+	document.write('<img src="'+img+'"/>');
+
+	</script>
+</head>
+
