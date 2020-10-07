@@ -1,0 +1,38 @@
+<head>5
+    <script>
+        function examples() {
+            function run1() {
+                console.log("run2");
+
+                console.log(foo); // undefined
+                var foo = "Foo";
+                console.log(foo); // Foo
+            }
+
+            function run2() {
+                console.log("run1");
+
+                var foo = "Foo";
+                let bar = "Bar";
+
+                console.log(foo, bar);
+
+                {
+                    let baz = "Bazz";
+                    console.log(baz);
+                }
+
+                console.log(baz); // ReferenceError
+            }
+
+            run1();
+            run2();
+        }
+
+        window.onload = examples;
+    </script>
+    <title></title>
+</head>
+<body>
+
+</body>

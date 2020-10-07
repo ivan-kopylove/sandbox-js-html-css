@@ -1,0 +1,19 @@
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        let addElementFunction = function() {
+            var img = document.createElement("img");
+            img.src = "https://www.google.com/favicon.ico";
+            img.onclick = function() {
+                alert('here be dragons');
+                return false;
+            };
+
+            $("#myElement").append(img)
+        };
+    </script>
+</head>
+
+<button onclick="addElementFunction()">Add element</button>
+<br>
+<div id="myElement">some pivot element</div>

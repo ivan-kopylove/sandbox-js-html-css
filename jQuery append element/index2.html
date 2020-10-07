@@ -1,0 +1,19 @@
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        let addElementFunction = function() {
+            var button = document.createElement("button");
+            button.innerHTML = "added element";
+            button.onclick = function() {
+                alert('here be dragons');
+                return false;
+            };
+
+            $("#myElement").append(button)
+        };
+    </script>
+</head>
+
+<button onclick="addElementFunction()">Add element</button>
+<br>
+<div id="myElement">some pivot element</div>
